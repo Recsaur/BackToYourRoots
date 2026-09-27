@@ -1,12 +1,64 @@
 extends Line2D
+@onready var tip_sprite = $"../Sprite2D"
+var sprite_offset: float = 10.0
+var joint_count = 20
+var segment_length = 20
+var smooth_speed = 50.0
+var click_radius = 40.0
 
+var is_dragging: bool = false
+var points_list: Array[Vector2] = []
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	clear_points()
+	
+	for i in range(joint_count):
+		points_list.append(Vector2(0, i * segment_length))
+	
+	points = points_list
 
+func _input(event):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			var local_mouse = to_local(get_global_mouse_position())
+			var tip_position = points_list[-1]
+			
+			if local_mouse.distance_to(tip_position) < click_radius:
+				is_dragging = true
+				get_viewport().set_input_as_handled()
+		else:
+			is_dragging = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	var 
-	pass
+func _process(delta):
+	if is_dragging:
+		points_list[-1] = to_local(get_global_mouse_position())
+	
+	for i in range(joint_count - 2, -1, -1):
+		var target = points_list[i + 1]
+		var current = points_list[i]
+		var direction = (current - target).normalized()
+		if direction == Vector2.ZERO: direction = Vector2.DOWN
+		
+		var desired_pos = target + direction * segment_length
+		points_list[i] = points_list[i].lerp(desired_pos, smooth_speed * delta)
+	
+	points_list[0] = Vector2.ZERO
+	
+	for i in range(1, joint_count):
+		var target = points_list[i - 1]
+		var current = points_list[i]
+		var direction = (current - target).normalized()
+		if direction == Vector2.ZERO: direction = Vector2.DOWN
+		
+		points_list[i] = target + direction * segment_length
+	points = points_list
+	if tip_sprite:
+		var tip_pos = points_list[-1]
+		var prev_pos = points_list[-2]
+		tip_sprite.global_position = to_global(tip_pos) 
+		var look_direction = tip_pos - prev_pos
+		tip_sprite.global_rotation = look_direction.angle() + global_rotation
+		var wire_angle = look_direction.angle()
+		var offset_vector = Vector2.from_angle(wire_angle) * sprite_offset
+		var final_local_pos = tip_pos + offset_vector
+		tip_sprite.global_position = to_global(final_local_pos) 

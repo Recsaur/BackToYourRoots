@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bdlcd80rkid7m"]
+
+[ext_resource type="Texture2D" uid="uid://cuymehmy1ut15" path="res://assets/makedrinksection.png" id="1_cc5k7"]
+[ext_resource type="Texture2D" uid="uid://cqtwy0bkfbw5s" path="res://assets/counter.png" id="2_dp5eb"]
+[ext_resource type="Script" uid="uid://e3ubx3j2o7p8" path="res://scenes/camera_2d.gd" id="3_1uqjr"]
+[ext_resource type="Texture2D" uid="uid://erxak7diy65i" path="res://assets/sapsterlever.png" id="4_8l0h3"]
+[ext_resource type="Texture2D" uid="uid://drmp8q46htmw1" path="res://assets/sapster.png" id="5_pfbp6"]
+[ext_resource type="Texture2D" uid="uid://biogd11qpk30n" path="res://assets/tubes.png" id="6_75yr1"]
+
+[node name="Register" type="Node2D" unique_id=1290182734]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=49031107]
+offset_right = 963.0
+offset_bottom = 642.0
+texture = ExtResource("1_cc5k7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=208136837]
+position = Vector2(482.92102, 548.875)
+scale = Vector2(3.2236838, 3.2236838)
+texture = ExtResource("2_dp5eb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=987853624]
+position = Vector2(481, 320)
+zoom = Vector2(1.05, 1.05)
+position_smoothing_enabled = true
+script = ExtResource("3_1uqjr")
+
+[node name="lever" type="Sprite2D" parent="." unique_id=631440392]
+position = Vector2(750.00006, 204.00002)
+scale = Vector2(3.046875, 3.046875)
+texture = ExtResource("4_8l0h3")
+
+[node name="Sapster" type="Sprite2D" parent="." unique_id=313343247]
+position = Vector2(617, 268)
+scale = Vector2(3.0250006, 3.0250006)
+texture = ExtResource("5_pfbp6")
+
+[node name="Tubes" type="Sprite2D" parent="." unique_id=1240181746]
+position = Vector2(147.99998, 258)
+scale = Vector2(3.2499998, 3.2500002)
+texture = ExtResource("6_75yr1")

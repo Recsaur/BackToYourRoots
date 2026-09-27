@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://1nlnqtjptd0q"]
 
-[ext_resource type="Script" uid="uid://cejrsaikjclki" path="res://root.gd" id="1_twpsu"]
 [ext_resource type="Texture2D" uid="uid://dqua2t1qa283q" path="res://assets/root.png" id="2_lrqlo"]
 [ext_resource type="Script" uid="uid://dqho23n5w7yft" path="res://scenes/line_2d.gd" id="3_sqa0i"]
 [ext_resource type="Texture2D" uid="uid://bnxdbrhvlslt4" path="res://assets/roottip.png" id="4_jh1ax"]
@@ -9,20 +8,30 @@
 _data = [Vector2(0, 0.55425775), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_twpsu"]
+radius = 27.166155
+
 [node name="Root" type="Node2D" unique_id=632057737]
-script = ExtResource("1_twpsu")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=237383633]
 texture_repeat = 2
-position = Vector2(109, 515)
-scale = Vector2(16.1875, 16.1875)
-points = PackedVector2Array(3.706563, -3.397684, -10.6254835, -1.7297306)
+position = Vector2(479.00006, -1867)
+scale = Vector2(5.5, 5.5)
 width_curve = SubResource("Curve_kycxp")
 texture = ExtResource("2_lrqlo")
 texture_mode = 1
+joint_mode = 2
 begin_cap_mode = 1
 end_cap_mode = 1
 script = ExtResource("3_sqa0i")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=252616870]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=660614723]
+position = Vector2(106, 449.00003)
+scale = Vector2(1.71875, 1.71875)
 texture = ExtResource("4_jh1ax")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=645948781]
+position = Vector2(105, 446)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1704345092]
+shape = SubResource("CircleShape2D_twpsu")

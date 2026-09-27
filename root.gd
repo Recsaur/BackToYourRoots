@@ -1,11 +1,19 @@
-extends Node2D
+extends CharacterBody2D
+
+var TransDone = false
+#const SPEED = 500.0
+const MOMENTUM = 5
+#const JUMP_VELOCITY = -400.0
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _physics_process(delta: float) -> void:
+	var direction := Input.get_vector("left","right","up","down")
+	if direction:
+		velocity = velocity.move_toward(direction * 250, 750 * delta)
+		#rotation = lerp_angle(rotation, velocity.angle(), delta * 10.0)
+	else:
+		velocity = velocity.move_toward(Vector2.ZERO, 1500 * delta)
+	if velocity.length() > 1.0:
+		rotation = lerp_angle(rotation, velocity.angle(), delta * 10.0)
+	move_and_slide()
+	

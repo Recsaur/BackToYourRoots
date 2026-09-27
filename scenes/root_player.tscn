@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://38u7dd714pur"]
+
+[ext_resource type="Script" uid="uid://cejrsaikjclki" path="res://root.gd" id="1_pllrs"]
+[ext_resource type="Texture2D" uid="uid://bnxdbrhvlslt4" path="res://assets/roottip.png" id="2_0a1y8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pllrs"]
+
+[node name="Root" type="CharacterBody2D" unique_id=1999974940]
+scale = Vector2(3.9157088, 3.9157088)
+script = ExtResource("1_pllrs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1049287089]
+shape = SubResource("CircleShape2D_pllrs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1251613763]
+position = Vector2(-9.530088, 0)
+scale = Vector2(0.8877481, 0.8877481)
+texture = ExtResource("2_0a1y8")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1015161161]
+position = Vector2(-16.677654, 0)
