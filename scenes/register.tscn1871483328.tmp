@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bkjpxk2aooiit"]
+
+[ext_resource type="Texture2D" uid="uid://cxdj043dowdrw" path="res://assets/caf.png" id="1_gvynn"]
+[ext_resource type="Script" uid="uid://e3ubx3j2o7p8" path="res://scenes/camera_2d.gd" id="2_th0y5"]
+
+[node name="Register" type="Node2D" unique_id=1290182734]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=49031107]
+offset_right = 963.0
+offset_bottom = 642.0
+texture = ExtResource("1_gvynn")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=987853624]
+position = Vector2(481, 320)
+zoom = Vector2(1.05, 1.05)
+position_smoothing_enabled = true
+script = ExtResource("2_th0y5")
