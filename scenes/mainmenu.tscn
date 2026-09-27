@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b1aeslcyj6ore"]
+
+[ext_resource type="Texture2D" uid="uid://begf17dgs2vt8" path="res://assets/main menu.png" id="1_natt5"]
+[ext_resource type="Script" uid="uid://e3ubx3j2o7p8" path="res://scenes/camera_2d.gd" id="2_r3g3c"]
+
+[node name="mainmenu" type="Node2D" unique_id=640469749]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1979175642]
+position = Vector2(479.62494, 319)
+scale = Vector2(3.2124996, 3.2124999)
+texture = ExtResource("1_natt5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1489170644]
+position = Vector2(481, 320)
+zoom = Vector2(1.05, 1.05)
+position_smoothing_enabled = true
+script = ExtResource("2_r3g3c")

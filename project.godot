@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Back To Your roots"
-run/main_scene="uid://bkjpxk2aooiit"
+run/main_scene="uid://bdlcd80rkid7m"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
+GameController="*uid://3fdx2lbqu3nl"
 
 [display]
 

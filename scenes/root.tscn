@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://dqho23n5w7yft" path="res://scenes/line_2d.gd" id="3_sqa0i"]
 [ext_resource type="Texture2D" uid="uid://bnxdbrhvlslt4" path="res://assets/roottip.png" id="4_jh1ax"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jh1ax"]
+
 [sub_resource type="Curve" id="Curve_kycxp"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
@@ -15,9 +17,10 @@ radius = 27.166155
 
 [node name="Line2D" type="Line2D" parent="." unique_id=237383633]
 texture_repeat = 2
+material = SubResource("ShaderMaterial_jh1ax")
 position = Vector2(-9.536743e-07, 4.7683716e-07)
 scale = Vector2(5.5, 5.5)
-points = PackedVector2Array(-4.5454545, 34.727272, -2.4115257, 32.111256, -0.49155807, 29.757538, 1.6331673, 27.152798, 3.399559, 25.103783, 5.0378304, 23.203388, 6.545454, 21.454544, 8.75959, 18.398952, 9.892258, 16.835838, 11.636363, 14.727272, 12.719547, 12.93408, 14.265854, 10.9971285, 15.779175, 9.101491, 17.01873, 7.548787, 18.545454, 5.6363635, 15.454545, 3.090909, 12.727272, 1.4545453, 9.999999, -1.0909091, 5.090909, -2.5454545, 9.209061, -3.278823, 13.090908, -3.6363635, 15.497948, -4.217372, 18.363636, -4.9090905, 15.272726, -8.363636)
+points = PackedVector2Array(0.5454547, 27.636362, -10.545454, 28.363634, -13.999999, 12.727272, -5.8181815, 7.272727, 1.4545455, 19.090908, 21.999998, 15.272726, 21.454544, 5.090909, 8.90909, 2.9090908)
 width_curve = SubResource("Curve_kycxp")
 texture = ExtResource("2_lrqlo")
 texture_mode = 1
@@ -31,7 +34,7 @@ position = Vector2(1.1920929e-07, 5.684342e-14)
 scale = Vector2(1.71875, 1.71875)
 texture = ExtResource("4_jh1ax")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=645948781]
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=645948781 groups=["root"]]
 position = Vector2(-6.935813e-08, -3.3072534e-14)
 scale = Vector2(0.58181816, 0.58181816)
 

@@ -34,14 +34,17 @@ func _ready():
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			var local_mouse = to_local(get_global_mouse_position())
-			var tip_position = points_list[-1]
-			if local_mouse.distance_to(tip_position) < click_radius:
-				is_dragging = true
-				get_viewport().set_input_as_handled()
-		else:
-			is_dragging = false
+		if GameController.RootDraggable:
+			if event.pressed:
+				var local_mouse = to_local(get_global_mouse_position())
+				var tip_position = points_list[-1]
+				if local_mouse.distance_to(tip_position) < click_radius:
+					is_dragging = true
+					GameController.HoldingRoot = true
+					get_viewport().set_input_as_handled()
+			else:
+				is_dragging = false
+				GameController.HoldingRoot = false
 
 func _process(delta):
 	if is_dragging:
