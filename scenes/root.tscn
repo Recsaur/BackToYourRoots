@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bnxdbrhvlslt4" path="res://assets/roottip.png" id="4_jh1ax"]
 
 [sub_resource type="Curve" id="Curve_kycxp"]
-_data = [Vector2(0, 0.55425775), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_twpsu"]
@@ -15,8 +15,9 @@ radius = 27.166155
 
 [node name="Line2D" type="Line2D" parent="." unique_id=237383633]
 texture_repeat = 2
-position = Vector2(479.00006, -1867)
+position = Vector2(-9.536743e-07, 4.7683716e-07)
 scale = Vector2(5.5, 5.5)
+points = PackedVector2Array(-4.5454545, 34.727272, -2.4115257, 32.111256, -0.49155807, 29.757538, 1.6331673, 27.152798, 3.399559, 25.103783, 5.0378304, 23.203388, 6.545454, 21.454544, 8.75959, 18.398952, 9.892258, 16.835838, 11.636363, 14.727272, 12.719547, 12.93408, 14.265854, 10.9971285, 15.779175, 9.101491, 17.01873, 7.548787, 18.545454, 5.6363635, 15.454545, 3.090909, 12.727272, 1.4545453, 9.999999, -1.0909091, 5.090909, -2.5454545, 9.209061, -3.278823, 13.090908, -3.6363635, 15.497948, -4.217372, 18.363636, -4.9090905, 15.272726, -8.363636)
 width_curve = SubResource("Curve_kycxp")
 texture = ExtResource("2_lrqlo")
 texture_mode = 1
@@ -26,12 +27,13 @@ end_cap_mode = 1
 script = ExtResource("3_sqa0i")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=660614723]
-position = Vector2(106, 449.00003)
+position = Vector2(1.1920929e-07, 5.684342e-14)
 scale = Vector2(1.71875, 1.71875)
 texture = ExtResource("4_jh1ax")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=645948781]
-position = Vector2(105, 446)
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=645948781]
+position = Vector2(-6.935813e-08, -3.3072534e-14)
+scale = Vector2(0.58181816, 0.58181816)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1704345092]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1704345092]
 shape = SubResource("CircleShape2D_twpsu")

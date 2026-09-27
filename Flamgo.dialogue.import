@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://67ub0vfd7avp"
+path="res://.godot/imported/Flamgo.dialogue-3cf048ddd7f5393311b22a5bba86bfae.tres"
+
+[deps]
+
+source_file="res://Flamgo.dialogue"
+dest_files=["res://.godot/imported/Flamgo.dialogue-3cf048ddd7f5393311b22a5bba86bfae.tres"]
+
+[params]
+
+defaults=true

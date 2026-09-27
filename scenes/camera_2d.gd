@@ -3,11 +3,11 @@ extends Camera2D
 var scroll_speed: float = 500.0 
 var edge_margin: float = 150.0 
 
-var left_limit: float = get_viewport_rect().size.x + 480.0
-var right_limit: float = get_viewport_rect().size.x + 500.0
+var left_limit = get_viewport_rect().size.x + 480.0
+var right_limit = get_viewport_rect().size.x + 500.0
 
-var down_limit: float = get_viewport_rect().size.y + 310.0
-var up_limit: float = get_viewport_rect().size.y + 330.0
+var down_limit = get_viewport_rect().size.y + 310.0
+var up_limit = get_viewport_rect().size.y + 330.0
 
 
 func _process(delta: float) -> void:
