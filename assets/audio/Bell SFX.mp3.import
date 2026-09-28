@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gigkjxmwq0p3"
+path="res://.godot/imported/Bell SFX.mp3-929fdbee7a4e63c5e945b33b9b5e405a.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Bell SFX.mp3"
+dest_files=["res://.godot/imported/Bell SFX.mp3-929fdbee7a4e63c5e945b33b9b5e405a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

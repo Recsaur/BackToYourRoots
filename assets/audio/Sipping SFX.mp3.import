@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsx2txjopttsp"
+path="res://.godot/imported/Sipping SFX.mp3-3270dfc6a5d7b677e06eff00dd3075d0.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Sipping SFX.mp3"
+dest_files=["res://.godot/imported/Sipping SFX.mp3-3270dfc6a5d7b677e06eff00dd3075d0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

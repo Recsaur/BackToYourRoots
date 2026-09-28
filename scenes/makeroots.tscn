@@ -15,8 +15,15 @@
 [ext_resource type="Texture2D" uid="uid://bin2rn66ndiht" path="res://assets/tube2s.png" id="10_wrsig"]
 [ext_resource type="Script" uid="uid://bqxh5v6lb0k3g" path="res://scenes/tubes_2.gd" id="11_3vxx7"]
 [ext_resource type="Texture2D" uid="uid://bb7joyd10md16" path="res://assets/tube1s.png" id="11_yii28"]
+[ext_resource type="Script" uid="uid://duwibpxbjfbqx" path="res://scenes/sapster.gd" id="12_qgdgx"]
 [ext_resource type="Script" uid="uid://bmjoau0hfejl5" path="res://scenes/tubes_3.gd" id="13_t4ypj"]
 [ext_resource type="Texture2D" uid="uid://bxncbsa0f5luo" path="res://assets/plate.png" id="15_t4ypj"]
+[ext_resource type="Texture2D" uid="uid://begf17dgs2vt8" path="res://assets/main menu.png" id="18_18kij"]
+[ext_resource type="Script" uid="uid://bb7oag6vo0teb" path="res://scenes/rootsstations.gd" id="19_wmu7e"]
+[ext_resource type="Script" uid="uid://bbi3qs0heuutv" path="res://scenes/label.gd" id="21_5ipjf"]
+[ext_resource type="Texture2D" uid="uid://cysuiifxvj8bs" path="res://assets/Register Button.png" id="21_oj0vp"]
+[ext_resource type="Script" uid="uid://b3pkgkyeaxx8u" path="res://scenes/texture_button.gd" id="22_qwj8p"]
+[ext_resource type="Texture2D" uid="uid://c6f5via3wgna" path="res://assets/audio/Trashcan.png" id="23_r6hu7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kgr4m"]
 shader = ExtResource("7_8l0h3")
@@ -122,18 +129,24 @@ scale = Vector2(2.2282624, 2.2282624)
 texture = ExtResource("15_t4ypj")
 
 [node name="Cup" type="Sprite2D" parent="." unique_id=793104143]
+top_level = true
+z_index = 2
 position = Vector2(643, 468.99997)
 scale = Vector2(3.2391303, 3.2391305)
 texture = ExtResource("8_kgr4m")
 
 [node name="Root" parent="." unique_id=632057737 instance=ExtResource("7_dp5eb")]
 position = Vector2(617, 283)
-rotation = 0.5235988
+rotation = 3.1415927
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=149526513]
+position = Vector2(620, 380)
 
 [node name="Sapster" type="Sprite2D" parent="." unique_id=313343247]
 position = Vector2(617, 268)
 scale = Vector2(3.0250006, 3.0250006)
 texture = ExtResource("5_pfbp6")
+script = ExtResource("12_qgdgx")
 
 [node name="Tubes" type="Sprite2D" parent="." unique_id=1240181746]
 material = SubResource("ShaderMaterial_yii28")
@@ -177,6 +190,53 @@ position = Vector2(11.115391, 0.30769157)
 scale = Vector2(1.0000002, 1)
 shape = SubResource("RectangleShape2D_3vxx7")
 
+[node name="Serve" type="TextureButton" parent="." unique_id=1056476097]
+visible = false
+offset_left = 528.0
+offset_top = 536.0
+offset_right = 828.0
+offset_bottom = 736.0
+scale = Vector2(0.6285325, 0.2958602)
+texture_normal = ExtResource("18_18kij")
+
+[node name="stations" type="CanvasLayer" parent="." unique_id=1533857106]
+layer = 3
+script = ExtResource("19_wmu7e")
+
+[node name="toppings" type="TextureButton" parent="stations" unique_id=228695415]
+offset_left = 569.00006
+offset_top = 509.0
+offset_right = 669.00006
+offset_bottom = 609.0
+scale = Vector2(0.9464627, 0.9464627)
+disabled = true
+texture_normal = ExtResource("21_oj0vp")
+
+[node name="Label" type="Label" parent="stations" unique_id=1920025411]
+offset_left = 509.0
+offset_top = 545.0
+offset_right = 570.0
+offset_bottom = 568.0
+text = "serve ->"
+
+[node name="Label" type="Label" parent="." unique_id=497608802]
+offset_left = 768.0
+offset_top = 467.0
+offset_right = 917.0
+offset_bottom = 516.0
+text = "thingssfsdfdsfdsfdsfdsffsfdsfsdfsd"
+autowrap_mode = 3
+script = ExtResource("21_5ipjf")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=934908415]
+offset_left = 839.0
+offset_top = 23.0
+offset_right = 871.0
+offset_bottom = 55.0
+scale = Vector2(3.0728898, 3.0728898)
+texture_normal = ExtResource("23_r6hu7")
+script = ExtResource("22_qwj8p")
+
 [connection signal="mouse_entered" from="LeverPivot/lever/Area2D" to="LeverPivot/lever" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="LeverPivot/lever/Area2D" to="LeverPivot/lever" method="_on_area_2d_mouse_exited"]
 [connection signal="pressed" from="LeverPivot/Button" to="LeverPivot/lever" method="_on_button_pressed"]
@@ -186,3 +246,5 @@ shape = SubResource("RectangleShape2D_3vxx7")
 [connection signal="area_exited" from="Tubes2/Area2D" to="Tubes2" method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="Tubes3/Area2D" to="Tubes3" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Tubes3/Area2D" to="Tubes3" method="_on_area_2d_area_exited"]
+[connection signal="pressed" from="stations/toppings" to="stations" method="_on_toppings_pressed"]
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

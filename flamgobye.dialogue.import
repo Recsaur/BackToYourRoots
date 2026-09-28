@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://rj31mpuxthnd"
+path="res://.godot/imported/flamgobye.dialogue-75b38ccdd4e32ca7a7a664d702815765.tres"
+
+[deps]
+
+source_file="res://flamgobye.dialogue"
+dest_files=["res://.godot/imported/flamgobye.dialogue-75b38ccdd4e32ca7a7a664d702815765.tres"]
+
+[params]
+
+defaults=true

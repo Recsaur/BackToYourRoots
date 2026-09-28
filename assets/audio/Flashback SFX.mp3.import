@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvkhojdky6hp"
+path="res://.godot/imported/Flashback SFX.mp3-f1512e6f7c4fb846b96a35e939b0d956.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Flashback SFX.mp3"
+dest_files=["res://.godot/imported/Flashback SFX.mp3-f1512e6f7c4fb846b96a35e939b0d956.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

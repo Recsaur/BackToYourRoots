@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Back To Your roots"
-run/main_scene="uid://bdlcd80rkid7m"
+run/main_scene="uid://b1aeslcyj6ore"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,11 +19,13 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 GameController="*uid://3fdx2lbqu3nl"
+AudioHandler="*uid://dl7ic1et6h7xl"
 
 [display]
 
 window/size/viewport_width=960
 window/size/viewport_height=640
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
@@ -51,10 +53,15 @@ down={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
 ]
 }
+leftclick={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Flamgo.dialogue", "res://test.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Flamgo.dialogue", "res://test.dialogue", "res://guanya.dialogue", "res://flamgobye.dialogue")
 
 [physics]
 

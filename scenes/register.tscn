@@ -5,11 +5,29 @@
 [ext_resource type="Resource" uid="uid://67ub0vfd7avp" path="res://Flamgo.dialogue" id="2_b7sfs"]
 [ext_resource type="Script" uid="uid://e3ubx3j2o7p8" path="res://scenes/camera_2d.gd" id="2_th0y5"]
 [ext_resource type="Texture2D" uid="uid://cqtwy0bkfbw5s" path="res://assets/counter.png" id="2_ul2ju"]
+[ext_resource type="Resource" uid="uid://c7hlaueeolyks" path="res://guanya.dialogue" id="3_1f6xj"]
+[ext_resource type="Resource" uid="uid://rj31mpuxthnd" path="res://flamgobye.dialogue" id="3_2cgl2"]
 [ext_resource type="Texture2D" uid="uid://b42ig4yjhvp61" path="res://assets/falmo.png" id="3_b7sfs"]
+[ext_resource type="Texture2D" uid="uid://be8pst52ulp3p" path="res://assets/elephant.png" id="6_2cgl2"]
+[ext_resource type="Script" uid="uid://b0e51bgowrvwh" path="res://scenes/stations.gd" id="7_jv4ey"]
+[ext_resource type="Texture2D" uid="uid://erxak7diy65i" path="res://assets/sapsterlever.png" id="7_m6wqx"]
+[ext_resource type="PackedScene" uid="uid://b44auhwoo3sm0" path="res://scenes/cup.tscn" id="9_ugs73"]
+[ext_resource type="Texture2D" uid="uid://bxncbsa0f5luo" path="res://assets/plate.png" id="10_tvbe1"]
+[ext_resource type="Texture2D" uid="uid://crfwnf6t0u52j" path="res://assets/cup.png" id="11_uayrd"]
+[ext_resource type="Texture2D" uid="uid://drmp8q46htmw1" path="res://assets/sapster.png" id="12_tvbe1"]
+[ext_resource type="Script" uid="uid://bbi3qs0heuutv" path="res://scenes/label.gd" id="13_i6beb"]
+[ext_resource type="PackedScene" uid="uid://dewj40ophtp4s" path="res://scenes/bell.tscn" id="13_uayrd"]
+[ext_resource type="Script" uid="uid://cddo5anctcjlr" path="res://scenes/canvas_layer.gd" id="15_wnugy"]
+[ext_resource type="Texture2D" uid="uid://paeu1k8nltr0" path="res://assets/flamsip.png" id="16_gym06"]
+[ext_resource type="Texture2D" uid="uid://d31mdvxiddtvm" path="res://assets/flamwow.png" id="17_r3m8o"]
+[ext_resource type="PackedScene" uid="uid://cr6r6jdsjdfkk" path="res://scenes/fades.tscn" id="18_r3m8o"]
+[ext_resource type="Texture2D" uid="uid://h0jqejh33xdv" path="res://assets/falmo b.png" id="19_ato8o"]
 
 [node name="Register" type="Node2D" unique_id=1290182734]
 script = ExtResource("1_i4ar7")
 dialogue_resource = ExtResource("2_b7sfs")
+dialogue_resource1 = ExtResource("3_2cgl2")
+dialogue_resource2 = ExtResource("3_1f6xj")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=49031107]
 offset_right = 963.0
@@ -21,6 +39,11 @@ position = Vector2(219, 824)
 scale = Vector2(3.0714285, 3.0714285)
 texture = ExtResource("3_b7sfs")
 
+[node name="guanya" type="Sprite2D" parent="." unique_id=741122588]
+position = Vector2(254, 898)
+scale = Vector2(2.6676188, 2.6676188)
+texture = ExtResource("6_2cgl2")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=208136837]
 position = Vector2(482.92102, 548.875)
 scale = Vector2(3.2236838, 3.2236838)
@@ -31,3 +54,88 @@ position = Vector2(481, 320)
 zoom = Vector2(1.05, 1.05)
 position_smoothing_enabled = true
 script = ExtResource("2_th0y5")
+
+[node name="stations" type="CanvasLayer" parent="." unique_id=1631878205]
+visible = false
+script = ExtResource("7_jv4ey")
+
+[node name="Roots" type="TextureButton" parent="stations" unique_id=89752921]
+modulate = Color(0.64567935, 0.64567935, 0.64567935, 1)
+offset_left = 39.000004
+offset_top = 541.0
+offset_right = 79.0
+offset_bottom = 581.0
+scale = Vector2(1.7675109, 1.7675109)
+texture_normal = ExtResource("7_m6wqx")
+
+[node name="cup" parent="." unique_id=455089247 instance=ExtResource("9_ugs73")]
+visible = false
+position = Vector2(1, 2)
+
+[node name="duo" type="Node2D" parent="." unique_id=294298971]
+visible = false
+
+[node name="Plate" type="Sprite2D" parent="duo" unique_id=813626378]
+position = Vector2(666.8099, 538.25)
+scale = Vector2(2.2282624, 2.2282624)
+texture = ExtResource("10_tvbe1")
+
+[node name="Cup" type="Sprite2D" parent="duo" unique_id=2055777139]
+top_level = true
+z_index = 2
+position = Vector2(688.8098, 506.25)
+scale = Vector2(3.2391303, 3.2391305)
+texture = ExtResource("11_uayrd")
+
+[node name="Serve" type="TextureButton" parent="duo" unique_id=468339932]
+offset_left = 531.0
+offset_top = 332.0
+offset_right = 790.0
+offset_bottom = 407.0
+texture_normal = ExtResource("12_tvbe1")
+
+[node name="Label" type="Label" parent="duo" unique_id=1550776017]
+offset_left = 776.0
+offset_top = 455.0
+offset_right = 925.0
+offset_bottom = 504.0
+text = "thingssfsdfdsfdsfdsfdsffsfdsfsdfsd"
+autowrap_mode = 3
+script = ExtResource("13_i6beb")
+
+[node name="bell" parent="." unique_id=1772312633 instance=ExtResource("13_uayrd")]
+position = Vector2(207, 522)
+scale = Vector2(3.1544433, 3.1544433)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=215808632]
+script = ExtResource("15_wnugy")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1069624987]
+offset_left = 727.0
+offset_top = 24.0
+offset_right = 816.0
+offset_bottom = 47.0
+scale = Vector2(2.17564, 2.17564)
+text = "Money: 123"
+
+[node name="Flamsip" type="Sprite2D" parent="." unique_id=353173789]
+position = Vector2(267.24915, 955.415)
+scale = Vector2(4.46633, 4.46633)
+texture = ExtResource("16_gym06")
+
+[node name="Flamwow" type="Sprite2D" parent="." unique_id=220283257]
+position = Vector2(715, 955.415)
+scale = Vector2(4.46633, 4.46633)
+texture = ExtResource("17_r3m8o")
+
+[node name="color" parent="." unique_id=1511031465 instance=ExtResource("18_r3m8o")]
+visible = false
+offset_left = -12.0
+offset_right = 977.0
+
+[node name="FalmoB" type="Sprite2D" parent="." unique_id=535055945]
+position = Vector2(492, 1040)
+texture = ExtResource("19_ato8o")
+
+[connection signal="pressed" from="stations/Roots" to="stations" method="_on_roots_pressed"]
+[connection signal="pressed" from="duo/Serve" to="." method="_on_serve_pressed"]

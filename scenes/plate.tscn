@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c4bccc4s28y3j"]
+
+[ext_resource type="Texture2D" uid="uid://bxncbsa0f5luo" path="res://assets/plate.png" id="1_2x0a8"]
+[ext_resource type="Texture2D" uid="uid://crfwnf6t0u52j" path="res://assets/cup.png" id="2_qy4xk"]
+
+[node name="Plate" type="Sprite2D" unique_id=363600038]
+position = Vector2(621.00006, 501)
+scale = Vector2(2.2282624, 2.2282624)
+texture = ExtResource("1_2x0a8")
+
+[node name="Cup" type="Sprite2D" parent="." unique_id=935284021]
+top_level = true
+z_index = 2
+position = Vector2(643, 468.99997)
+scale = Vector2(3.2391303, 3.2391305)
+texture = ExtResource("2_qy4xk")

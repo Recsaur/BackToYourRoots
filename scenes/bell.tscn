@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dewj40ophtp4s"]
+
+[ext_resource type="Texture2D" uid="uid://bfsk1xycqrurl" path="res://assets/servbell.png" id="2_sdw5a"]
+[ext_resource type="Script" uid="uid://bsghh3bbj8cpb" path="res://area_2d.gd" id="3_c5yny"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8g6tv"]
+radius = 14.0
+
+[node name="bell" type="Node2D" unique_id=1772312633]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=77124583]
+texture = ExtResource("2_sdw5a")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1373479185]
+script = ExtResource("3_c5yny")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=297631410]
+shape = SubResource("CircleShape2D_8g6tv")

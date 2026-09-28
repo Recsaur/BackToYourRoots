@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bkjpxk2aooiit"]
+
+[ext_resource type="Texture2D" uid="uid://cxdj043dowdrw" path="res://assets/caf.png" id="1_gvynn"]
+[ext_resource type="Script" uid="uid://cebs7gd35s88b" path="res://scenes/register.gd" id="1_i4ar7"]
+[ext_resource type="Resource" uid="uid://67ub0vfd7avp" path="res://Flamgo.dialogue" id="2_b7sfs"]
+[ext_resource type="Script" uid="uid://e3ubx3j2o7p8" path="res://scenes/camera_2d.gd" id="2_th0y5"]
+[ext_resource type="Texture2D" uid="uid://cqtwy0bkfbw5s" path="res://assets/counter.png" id="2_ul2ju"]
+[ext_resource type="Texture2D" uid="uid://b42ig4yjhvp61" path="res://assets/falmo.png" id="3_b7sfs"]
+[ext_resource type="Script" uid="uid://b0e51bgowrvwh" path="res://scenes/stations.gd" id="7_jv4ey"]
+[ext_resource type="Texture2D" uid="uid://erxak7diy65i" path="res://assets/sapsterlever.png" id="7_m6wqx"]
+
+[node name="Register" type="Node2D" unique_id=1290182734]
+script = ExtResource("1_i4ar7")
+dialogue_resource = ExtResource("2_b7sfs")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=49031107]
+offset_right = 963.0
+offset_bottom = 642.0
+texture = ExtResource("1_gvynn")
+
+[node name="Falmo" type="Sprite2D" parent="." unique_id=806841524]
+position = Vector2(219, 824)
+scale = Vector2(3.0714285, 3.0714285)
+texture = ExtResource("3_b7sfs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=208136837]
+position = Vector2(482.92102, 548.875)
+scale = Vector2(3.2236838, 3.2236838)
+texture = ExtResource("2_ul2ju")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=987853624]
+position = Vector2(481, 320)
+zoom = Vector2(1.05, 1.05)
+position_smoothing_enabled = true
+script = ExtResource("2_th0y5")
+
+[node name="stations" type="CanvasLayer" parent="." unique_id=1631878205]
+script = ExtResource("7_jv4ey")
+
+[node name="Roots" type="TextureButton" parent="stations" unique_id=89752921]
+modulate = Color(0.64567935, 0.64567935, 0.64567935, 1)
+offset_left = 39.000004
+offset_top = 541.0
+offset_right = 79.0
+offset_bottom = 581.0
+scale = Vector2(1.7675109, 1.7675109)
+texture_normal = ExtResource("7_m6wqx")
+
+[connection signal="pressed" from="stations/Roots" to="stations" method="_on_roots_pressed"]

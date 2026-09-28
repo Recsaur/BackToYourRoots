@@ -7,7 +7,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	print(GameController.cupinsides,"cup in")
-	if GameController.tubechoice == 1 and GameController.HoldingRoot == false:
+	if GameController.tubechoice == "Sugar Cane" and GameController.HoldingRoot == false:
 		print(GameController.cupinsides,"cup in")
 	print(GameController.tubechoice)
 	if GameController.HoldingRoot:
@@ -19,8 +19,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("root"):
 		print("ASFASASF")
 		outline_material.set_shader_parameter("outline_color", Color(1.0, 1.0, 1.0, 1.0))
-		GameController.tubechoice = 1
+		GameController.tubechoice = "Sugar Cane"
 		
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	outline_material.set_shader_parameter("outline_color", Color(1.0, 1.0, 1.0, 0.49))
-	GameController.tubechoice = 0
+	GameController.tubechoice = "0"

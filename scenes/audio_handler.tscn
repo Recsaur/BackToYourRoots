@@ -1,3 +1,55 @@
 [gd_scene format=3 uid="uid://dl7ic1et6h7xl"]
 
+[ext_resource type="Script" uid="uid://c5lvm4vudn6bt" path="res://scenes/audio_handler.gd" id="1_11bbw"]
+[ext_resource type="AudioStream" uid="uid://ccac8vcwmswft" path="res://assets/audio/recsaur backstory 1.wav" id="2_24e85"]
+[ext_resource type="AudioStream" uid="uid://gigkjxmwq0p3" path="res://assets/audio/Bell SFX.mp3" id="2_ohrrr"]
+[ext_resource type="AudioStream" uid="uid://cqyx1ss7h28up" path="res://assets/audio/recsaur chill music.wav" id="3_4bfri"]
+[ext_resource type="AudioStream" uid="uid://cgdc64s4j4tpi" path="res://assets/audio/Click.wav" id="3_wk83d"]
+[ext_resource type="AudioStream" uid="uid://d2dmikn45pri3" path="res://assets/audio/recsaur minigame music.wav" id="4_0q042"]
+[ext_resource type="AudioStream" uid="uid://cvkhojdky6hp" path="res://assets/audio/Flashback SFX.mp3" id="4_5sp38"]
+[ext_resource type="AudioStream" uid="uid://dn3tbvfu6fc5g" path="res://assets/audio/Hard click.wav" id="5_e2v1d"]
+[ext_resource type="AudioStream" uid="uid://cuvt83l7dghsd" path="res://assets/audio/Open and close door SFX.mp3" id="6_qix75"]
+[ext_resource type="AudioStream" uid="uid://bnlk4ljjjeg3n" path="res://assets/audio/Paper Turn.wav" id="7_lvf56"]
+[ext_resource type="AudioStream" uid="uid://ctiviv286dyyo" path="res://assets/audio/Pop SFX.mp3" id="8_egxqv"]
+[ext_resource type="AudioStream" uid="uid://cdaiymgbbdbf3" path="res://assets/audio/Pouring Liquid.wav" id="9_60re0"]
+[ext_resource type="AudioStream" uid="uid://bsx2txjopttsp" path="res://assets/audio/Sipping SFX.mp3" id="10_finge"]
+
 [node name="AudioHandler" type="Node2D" unique_id=1997195929]
+script = ExtResource("1_11bbw")
+
+[node name="BellSfx" type="AudioStreamPlayer2D" parent="." unique_id=1740045465]
+stream = ExtResource("2_ohrrr")
+max_polyphony = 10
+
+[node name="Click" type="AudioStreamPlayer2D" parent="." unique_id=326333003]
+stream = ExtResource("3_wk83d")
+
+[node name="FlashbackSfx" type="AudioStreamPlayer2D" parent="." unique_id=64042157]
+stream = ExtResource("4_5sp38")
+
+[node name="HardClick" type="AudioStreamPlayer2D" parent="." unique_id=1915847066]
+stream = ExtResource("5_e2v1d")
+
+[node name="OpenAndCloseDoorSfx" type="AudioStreamPlayer2D" parent="." unique_id=1836411024]
+stream = ExtResource("6_qix75")
+
+[node name="PaperTurn" type="AudioStreamPlayer2D" parent="." unique_id=1791970068]
+stream = ExtResource("7_lvf56")
+
+[node name="PopSfx" type="AudioStreamPlayer2D" parent="." unique_id=1047743655]
+stream = ExtResource("8_egxqv")
+
+[node name="PouringLiquid" type="AudioStreamPlayer2D" parent="." unique_id=1414467755]
+stream = ExtResource("9_60re0")
+
+[node name="SippingSfx" type="AudioStreamPlayer2D" parent="." unique_id=19561540]
+stream = ExtResource("10_finge")
+
+[node name="backstory" type="AudioStreamPlayer2D" parent="." unique_id=1966253743]
+stream = ExtResource("2_24e85")
+
+[node name="chill" type="AudioStreamPlayer2D" parent="." unique_id=1261926870]
+stream = ExtResource("3_4bfri")
+
+[node name="mainmenu" type="AudioStreamPlayer2D" parent="." unique_id=891721475]
+stream = ExtResource("4_0q042")

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b44auhwoo3sm0"]
+
+[ext_resource type="Script" uid="uid://bgq2vf6fk1eai" path="res://scenes/cup.gd" id="1_7q2t1"]
+[ext_resource type="Script" uid="uid://cmnb4tjx6x3fy" path="res://scenes/c11up.gd" id="1_kkhl5"]
+[ext_resource type="Texture2D" uid="uid://crfwnf6t0u52j" path="res://assets/cup.png" id="1_vafus"]
+[ext_resource type="Shader" uid="uid://d2spyd4fiqos5" path="res://scenes/makeroots.gdshader" id="2_ssn6n"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kkhl5"]
+shader = ExtResource("2_ssn6n")
+shader_parameter/thickness = 1.0000000475
+shader_parameter/ring_count = 4
+shader_parameter/ring_offset = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 0.5882353)
+shader_parameter/border_clipping_fix = true
+shader_parameter/aspect_ratio = 1.0
+shader_parameter/square_border = false
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/max_or_add = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssn6n"]
+size = Vector2(133, 87)
+
+[node name="cup" type="Node2D" unique_id=501220057]
+script = ExtResource("1_kkhl5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1405538688]
+
+[node name="Cup" type="Sprite2D" parent="Area2D" unique_id=1577928572]
+top_level = true
+z_index = 2
+material = SubResource("ShaderMaterial_kkhl5")
+position = Vector2(-4.7683716e-07, -7.1525574e-07)
+scale = Vector2(3.2391303, 3.2391305)
+texture = ExtResource("1_vafus")
+script = ExtResource("1_7q2t1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=464903793]
+position = Vector2(-2.5, -1.5)
+shape = SubResource("RectangleShape2D_ssn6n")
+
+[connection signal="mouse_entered" from="Area2D" to="Area2D/Cup" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="Area2D/Cup" method="_on_area_2d_mouse_exited"]

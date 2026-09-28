@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://b1aeslcyj6ore"]
 
+[ext_resource type="Script" uid="uid://cttoiwp3bi8sy" path="res://scenes/mainmenu.gd" id="1_dfy5j"]
 [ext_resource type="Texture2D" uid="uid://begf17dgs2vt8" path="res://assets/main menu.png" id="1_natt5"]
 [ext_resource type="Script" uid="uid://e3ubx3j2o7p8" path="res://scenes/camera_2d.gd" id="2_r3g3c"]
+[ext_resource type="Texture2D" uid="uid://bxncbsa0f5luo" path="res://assets/plate.png" id="3_3vvtq"]
+[ext_resource type="Texture2D" uid="uid://crfwnf6t0u52j" path="res://assets/cup.png" id="4_s5g8n"]
+[ext_resource type="Texture2D" uid="uid://igrf32f33mte" path="res://assets/Play Button.png" id="5_7yvfd"]
+[ext_resource type="Texture2D" uid="uid://b0jrajyljye5a" path="res://assets/Credits.png" id="6_dfy5j"]
 
 [node name="mainmenu" type="Node2D" unique_id=640469749]
+script = ExtResource("1_dfy5j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1979175642]
 position = Vector2(479.62494, 319)
@@ -15,3 +21,50 @@ position = Vector2(481, 320)
 zoom = Vector2(1.05, 1.05)
 position_smoothing_enabled = true
 script = ExtResource("2_r3g3c")
+
+[node name="Plate" type="Sprite2D" parent="." unique_id=975298128]
+position = Vector2(505.4674, 579.74994)
+scale = Vector2(2.2391305, 2.2391305)
+texture = ExtResource("3_3vvtq")
+
+[node name="Cup" type="Sprite2D" parent="." unique_id=783628935]
+position = Vector2(520, 541.75)
+scale = Vector2(3.7173913, 3.7173913)
+texture = ExtResource("4_s5g8n")
+
+[node name="Start" type="TextureButton" parent="." unique_id=1425140140]
+offset_left = 225.0
+offset_top = 319.0
+offset_right = 385.0
+offset_bottom = 367.0
+scale = Vector2(3.173541, 3.173541)
+texture_normal = ExtResource("5_7yvfd")
+
+[node name="Credits" type="TextureButton" parent="." unique_id=1278289275]
+offset_left = 267.00003
+offset_top = 397.0
+offset_right = 427.00003
+offset_bottom = 445.0
+scale = Vector2(2.6989374, 2.6989374)
+texture_normal = ExtResource("6_dfy5j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1385808846]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=100146937]
+offset_left = 303.0
+offset_top = 501.0
+offset_right = 696.0
+offset_bottom = 553.0
+color = Color(0.5040448, 0.3708262, 0.25950232, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=617569753]
+offset_left = 409.0
+offset_top = 515.0
+offset_right = 588.0
+offset_bottom = 564.0
+text = "description of the page
+"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

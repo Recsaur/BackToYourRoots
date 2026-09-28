@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c7hlaueeolyks"
+path="res://.godot/imported/guanya.dialogue-fc39f20b4b15abe17fb5de32b2a2916f.tres"
+
+[deps]
+
+source_file="res://guanya.dialogue"
+dest_files=["res://.godot/imported/guanya.dialogue-fc39f20b4b15abe17fb5de32b2a2916f.tres"]
+
+[params]
+
+defaults=true
